@@ -38,7 +38,7 @@ class Checks {
 		var cls = Context.getLocalClass().get();
 		var modulePath = Context.resolvePath(cls.module.split(".").join("/") + ".hx");
 		var libRoot = Path.directory(Path.directory(Path.directory(modulePath)));
-		var hdll = Path.join([libRoot, "native", "bin", "vlc-" + Sys.systemName().toLowerCase() + ".hdll"]);
+		var hdll = Path.join([libRoot, "native", "bin", "vlc_" + Sys.systemName().toLowerCase() + ".hdll"]);
 		if (!FileSystem.exists(hdll)) {
 			Context.warning(
 				'heapvlc: native/bin/vlc-${Sys.systemName().toLowerCase()}.hdll not found (expected at $hdll). '
